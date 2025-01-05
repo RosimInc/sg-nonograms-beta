@@ -143,8 +143,6 @@ const sketch = (p, id) => {
     }
 
     p.draw = function() {
-        mouseMoved();
-
         p.scale(zoom);
         p.background(ended ? p.color(100, 200, 100) : p.color(225));
 
@@ -167,7 +165,6 @@ const sketch = (p, id) => {
                 } else if(gridVal == CELL_MARK.WHITE) {
                     cellColor = p.lerpColor(cellColor, p.color('white'), 0.5);
                 }
-
                 
                 p.stroke(0);
                 p.strokeWeight(1);
@@ -279,8 +276,17 @@ const sketch = (p, id) => {
     }
 
     p.touchStarted = function() {
-        if(touches.length == 1)
-            handleEvent(getTouchInfo(touches[0]));
+        if(p.touches.length == 1)
+            handleEvent(getTouchInfo(p.touches[0]));
+        return false;
+    }
+
+    p.touchMoved = function() {
+        return false;
+    }
+
+    p.touchEnded = function() {
+        return false;
     }
 
     p.mousePressed = function() {
@@ -306,7 +312,7 @@ const sketch = (p, id) => {
         }
     }
 
-    function mouseMoved() {
+    p.mouseDragged = function() {
         if(!actionEvent || actions.length == 0)
             return;
 
