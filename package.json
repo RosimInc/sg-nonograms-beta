@@ -1,0 +1,26 @@
+{
+  "name": "sg-nonograms",
+  "version": "1.0.0",
+  "description": "Generating and playing Nonograms",
+  "main": "js/creator.js",
+  "type": "module",
+  "scripts": {
+    "gen": "node js/gen.js",
+    "start": "nodemon --exec http-server -c-i",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RosimInc/sg-nonograms.git"
+  },
+  "author": "RosimInc",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RosimInc/sg-nonograms/issues"
+  },
+  "homepage": "https://github.com/RosimInc/sg-nonograms#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "nodemon": "^3.1.9"
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RosimInc's Nonogram Café - Creator</title>
+    <script src="./js/creator.js" type="module"></script>
+    <link rel="stylesheet" href="./styles/creator.css">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="content">
+        <h1>RosimInc's Nonogram Café</h1>
+        <h2>Nonogram Creator</h2>
+        
+        <form id="creationForm">
+            <label for="numRows">Rows (4-25):</label><br>
+            <input type="number" id="numRows" name="numRows" value="10" min="4" max="35" required><br><br>
+            <label for="numCols">Columns (4-25):</label><br>
+            <input type="number" id="numCols" name="numCols" value="10" min="4" max="35" required><br><br>
+            
+            <label for="secretText">Secret:</label><br>
+            <input type="text" id="secretText" name="secretText" value="Abcd3" required>
+
+            <button type="button">Create!</button>
+        </form>
+        <div id="linkDiv">
+            <p id="link"></p>
+        </div>
+    </div>
+</body>
+</html>

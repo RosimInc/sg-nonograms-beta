@@ -1,0 +1,49 @@
+body {
+    background-color: #2e2e2e; /* Dark grey color */
+    color: white; /* Ensures text is readable */
+    font-family: Arial, sans-serif; /* Sets a clean font */
+}
+
+a {
+    color: #87CEFA;
+}
+
+.content {
+    padding: 15px;
+}
+
+#url {
+    width: 100%;
+    max-width: 600px;
+}
+
+#urlDiv {
+    display: none;
+    margin: 5px;
+}
+
+#message {
+    font-size: large;
+    font-weight: bold;
+}
+
+#solvedDiv {
+    display: none;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF; /* Blue */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
